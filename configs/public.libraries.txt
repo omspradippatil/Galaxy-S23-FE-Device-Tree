@@ -1,0 +1,14 @@
+libGLES_mali.so
+libOpenCL.so
+libopencv_core.so
+libopencv_imgproc.so
+libopencv_java.so
+libopencl.so
+libexynosgraphicbuffer.so
+libion_exynos.so
+libexynosdisplay.so
+libhdr10p_m2l.so
+libkeymaster_helper.so
+libskeymaster4device.so
+libsomp.so
+```
