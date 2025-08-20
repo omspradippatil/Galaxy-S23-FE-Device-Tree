@@ -1,0 +1,32 @@
+# Audio
+audio.offload.min.duration.secs=30
+audio.offload.video=true
+
+# Bluetooth
+ro.bluetooth.a2dp_offload.supported=true
+persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+
+# Camera
+camera.disable_zsl_mode=true
+
+# Display
+ro.sf.lcd_density=450
+
+# Graphics
+ro.opengles.version=196610
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+
+# Telephony
+ro.telephony.default_network=33,33
+telephony.lteOnCdmaDevice=0
+
+# USB
+ro.usb.first_boot=0
+
+# WiFi
+wifi.supplicant_scan_interval=15
