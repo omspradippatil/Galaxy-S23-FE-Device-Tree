@@ -11,4 +11,7 @@ libsensorservice.so
 libhardware.so
 libskeymaster4device.so
 libsomp.so
-```
+liblog.so
+libcutils.so
+libutils.so
+libbinder.so

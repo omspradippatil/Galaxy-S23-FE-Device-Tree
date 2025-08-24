@@ -1,15 +1,27 @@
 # Proprietary files for Samsung Galaxy S23 FE (r11s)
-# Based on actual vendor partition structure - only existing files
+# Complete list including all required files
 
-# Audio framework libraries
+# Binaries
+vendor/bin/abox_log
+vendor/bin/cal
+vendor/bin/cass
+vendor/bin/cbd
+vendor/bin/btcoex_cont_config
+vendor/bin/rild
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/bin/hw/macloader
+vendor/bin/hw/vendor.samsung.hardware.security.drk@1.0-service
+
+# Configuration files
+vendor/etc/btcon.json
+vendor/etc/ems.json
+
+# Audio HAL libraries
 vendor/lib/android.hardware.audio@2.0.so
-vendor/lib/android.hardware.audio@2.0-util.so
 vendor/lib/android.hardware.audio@6.0.so
-vendor/lib/android.hardware.audio@6.0-util.so
 vendor/lib/android.hardware.audio.common@2.0-util.so
 vendor/lib/android.hardware.audio.common@5.0.so
 vendor/lib/android.hardware.audio.common@6.0.so
-vendor/lib/android.hardware.audio.common@6.0-util.so
 vendor/lib/android.hardware.audio.common-util.so
 vendor/lib/android.hardware.audio.effect@2.0.so
 vendor/lib/android.hardware.audio.effect@2.0-util.so
@@ -62,14 +74,78 @@ vendor/etc/audio_board_info.xml
 
 # Media codecs
 vendor/etc/dax3_media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_profiles_V1_0.xml
 
-# Binaries that exist
-vendor/bin/abox_log
-vendor/bin/btcoex_cont_config
-vendor/bin/cal
-vendor/bin/cass
-vendor/bin/cbd
+# Init files
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/init/macloader.rc
 
-# Configuration files
-vendor/etc/btcon.json
-vendor/etc/ems.json
+# NFC
+vendor/etc/libnfc-nci.conf
+
+# Hardware abstraction layers
+vendor/lib/hw/gralloc.s5e8825.so
+vendor/lib/hw/keystore.s5e8825.so
+vendor/lib/hw/memtrack.s5e8825.so
+vendor/lib/hw/nfc_nci.samsung.so
+vendor/lib/hw/power.s5e8825.so
+vendor/lib/hw/sensors.s5e8825.so
+vendor/lib/hw/thermal.s5e8825.so
+vendor/lib/hw/vibrator.s5e8825.so
+vendor/lib/hw/vibrator.exynos2200.so
+vendor/lib/hw/wifiexts.s5e8825.so
+vendor/lib/hw/wifiexts.exynos2200.so
+vendor/lib64/hw/gralloc.s5e8825.so
+vendor/lib64/hw/keystore.s5e8825.so
+vendor/lib64/hw/memtrack.s5e8825.so
+vendor/lib64/hw/nfc_nci.samsung.so
+vendor/lib64/hw/power.s5e8825.so
+vendor/lib64/hw/sensors.s5e8825.so
+vendor/lib64/hw/thermal.s5e8825.so
+vendor/lib64/hw/vibrator.s5e8825.so
+vendor/lib64/hw/vibrator.exynos2200.so
+vendor/lib64/hw/wifiexts.s5e8825.so
+vendor/lib64/hw/wifiexts.exynos2200.so
+vendor/lib64/hw/vendor.samsung.hardware.security.drk@1.0-impl.so
+
+# Samsung specific libraries
+vendor/lib/libExynosVideoApi.so
+vendor/lib/libOpenCL.so
+vendor/lib/libexynos_ion.so
+vendor/lib/libmalicore.so
+vendor/lib/libril.so
+vendor/lib/libsec-ril.so
+vendor/lib/libsecnativefeature.so
+vendor/lib/libsecril-client.so
+vendor/lib/libsecure_storage.so
+vendor/lib/libsensorlistener.so
+vendor/lib/libwvhidl.so
+vendor/lib/vendor.samsung.hardware.security.drk@1.0.so
+vendor/lib64/libExynosVideoApi.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libexynos_ion.so
+vendor/lib64/libmalicore.so
+vendor/lib64/libril.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsecnativefeature.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsecure_storage.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libwvhidl.so
+vendor/lib64/vendor.samsung.hardware.security.drk@1.0.so
+
+# WiFi files
+vendor/etc/wifi/bcmdhd_apsta.bin
+vendor/etc/wifi/bcmdhd_apsta.bin_c1
+vendor/etc/wifi/bcmdhd_sta.bin
+vendor/etc/wifi/bcmdhd_sta.bin_c1
+vendor/etc/wifi/nvram.txt
+vendor/etc/wifi/nvram_net.txt
+vendor/etc/wifi/wpa_supplicant.conf
+
+# Firmware files
+vendor/firmware/bcm4389.bin
+vendor/firmware/bcm4389.hcd
+vendor/firmware/bcm4389c1.hcd
+vendor/firmware/bcm4389c1_murata.hcd

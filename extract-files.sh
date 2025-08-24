@@ -84,9 +84,23 @@ if [ "$SRC" = "vendor" ]; then
     fi
     
     echo "Extracting from S711BXXS1AWJ7 vendor.img..."
-    # Extract vendor.img
+    
+    # Create a clean mount point
+    sudo umount vendor_mount 2>/dev/null || true
+    rm -rf vendor_mount
     mkdir -p vendor_mount
-    sudo mount -o loop,ro vendor.img vendor_mount
+    
+    # Mount the vendor image with explicit filesystem type
+    sudo mount -t auto -o loop,ro vendor.img vendor_mount
+    
+    if ! mount | grep vendor_mount; then
+        echo "Failed to mount vendor.img"
+        exit 1
+    fi
+    
+    echo "Vendor partition mounted successfully"
+    echo "Contents of vendor_mount:"
+    ls -la vendor_mount/
     
     # Initialize the helper for vendor extraction
     setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"

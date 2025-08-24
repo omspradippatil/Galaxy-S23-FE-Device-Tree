@@ -57,6 +57,28 @@ hardware_samsung (Hardware HALs)
 ./extract-files.sh /path/to/system/dump
 ```
 
+### Troubleshooting Vendor Extraction
+
+If you get "file not found" errors during extraction:
+
+1. Verify vendor.img is properly mounted:
+```bash
+sudo mount -t auto -o loop,ro vendor.img vendor_mount
+ls -la vendor_mount/
+```
+
+2. Check the actual file structure:
+```bash
+find vendor_mount -name "*.so" | head -10
+find vendor_mount -name "*.xml" | head -10
+```
+
+3. Use minimal extraction for testing:
+```bash
+# Edit proprietary-files.txt to include only a few files that definitely exist
+./extract-files.sh vendor
+```
+
 ## Building Instructions
 
 ### Setting up the build environment
