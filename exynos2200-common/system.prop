@@ -1,0 +1,49 @@
+# Audio
+audio.deep_buffer.media=true
+audio.offload.video=true
+audio.offload.min.duration.secs=30
+
+# Bluetooth
+bluetooth.device.default_name=Galaxy S23 FE
+persist.bluetooth.a2dp_offload.disabled=false
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
+ro.bluetooth.a2dp_offload.supported=true
+
+# Camera
+camera.disable_zsl_mode=1
+vendor.camera.aux.packagelist=org.lineageos.snap,com.android.camera
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Dalvik
+dalvik.vm.lockprof.threshold=500
+
+# Display
+debug.sf.latch_unsignaled=1
+ro.hardware.gralloc=exynos9820
+ro.hw.mcu_ver=unknown
+ro.hw.ovl_hdr=off
+ro.hw.use_hwc_services=1
+ro.hw.use_virtual_display=1
+ro.sf.lcd_density=450
+
+# Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=7
+
+# Telephony
+ro.telephony.default_network=33,33
+telephony.lteOnCdmaDevice=0
+
+# Tones
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+ro.config.alarm_alert=Alarm_Classic.ogg
+ro.config.media_sound=Media_preview_Touch_the_light.ogg
+ro.config.ringtone_2=Ring_Digital_02.ogg
+ro.config.notification_sound_2=pixiedust.ogg
+
+# WiFi
+wifi.direct.interface=p2p-dev-wlan0
