@@ -1,220 +1,220 @@
 # Proprietary files for r11s - Samsung Galaxy S23 FE
 
-# ACDB
-vendor/etc/audconf/OPEN/audconf_DB_cal.acdb
-vendor/etc/audconf/OPEN/audconf_cal.acdb
-
-# ADSP
-vendor/bin/adsp_loader
-vendor/lib/libadsp_default_listener.so
-vendor/lib64/libadsp_default_listener.so
+# Binaries
+bin/abox_log
+bin/btcoex_cont_config
+bin/cass
+bin/cbd
+bin/secril_config_svc
+bin/hw/android.hardware.drm@1.4-service.clearkey
+bin/hw/android.hardware.wifi@1.0-service
+bin/hw/macloader
 
 # Audio
-vendor/etc/SoundBoosterParam.txt
-vendor/etc/floating_feature.xml
-vendor/etc/mixer_gains.xml
-vendor/etc/mixer_paths.xml
-vendor/lib/hw/audio.primary.exynos2200.so
-vendor/lib/hw/sound_trigger.primary.exynos2200.so
-vendor/lib/librecordalive.so
-vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib64/librecordalive.so
-vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/soundfx/libswdap.so
+etc/a2dpsink_audio_policy_configuration.xml
+etc/audio_board_info.xml
+etc/audio_effects.xml
+etc/audio_effects_sec.xml
+etc/audio_effects_spatializer.xml
+etc/audio_policy_configuration.xml
+etc/audio_policy_configuration_base.xml
+etc/audio_policy_configuration_sec.xml
+etc/audio_policy_volumes.xml
+etc/bluetooth_audio_policy_configuration.xml
+etc/btcon.json
+etc/dax3_media_codecs_dolby_audio.xml
+etc/default_volume_tables.xml
+etc/ems.json
+etc/init/android.hardware.drm@1.4-service.clearkey.rc
+etc/init/android.hardware.wifi@1.0-service.rc
+etc/media_codecs.xml
+etc/media_codecs_performance.xml
+etc/media_profiles_V1_0.xml
+etc/mixer_paths.xml
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service
-vendor/etc/bluetooth/bt_stack.conf
-vendor/firmware/bcm4375B1_murata.hcd
-vendor/firmware/bcm4375B1_semco.hcd
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
+# Camera permissions
+etc/permissions/android.hardware.camera.concurrent.xml
+etc/permissions/android.hardware.camera.flash-autofocus.xml
+etc/permissions/android.hardware.camera.front.xml
+etc/permissions/android.hardware.camera.full.xml
+etc/permissions/android.hardware.camera.raw.xml
 
-# Camera
-vendor/lib/hw/camera.exynos2200.so
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/camera.device@3.4-impl.so
-vendor/lib/camera.device@3.5-impl.so
-vendor/lib/libcamera_metadata_helper.so
-vendor/lib/libexynoscamera3.so
-vendor/lib/libexynoscamera_ep.so
-vendor/lib/libexynoscamera_plugin.so
-vendor/lib/libhwjpeg.so
-vendor/lib/libsensorlistener.so
-vendor/lib64/hw/camera.exynos2200.so
-vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
-vendor/lib64/libcamera_metadata_helper.so
-vendor/lib64/libexynoscamera3.so
-vendor/lib64/libexynoscamera_ep.so
-vendor/lib64/libexynoscamera_plugin.so
-vendor/lib64/libhwjpeg.so
-vendor/lib64/libsensorlistener.so
+# System configuration
+etc/public.libraries.txt
+etc/seccomp_policy/mediacodec.policy
+etc/selinux/vendor_file_contexts
+etc/selinux/vendor_hwservice_contexts
+etc/selinux/vendor_property_contexts
+etc/selinux/vendor_seapp_contexts
+etc/selinux/vendor_service_contexts
+etc/sensors/hals.conf
+
+# WiFi configuration
+etc/wifi/p2p_supplicant_overlay.conf
+etc/wifi/wpa_supplicant.conf
+etc/wifi/wpa_supplicant_overlay.conf
 
 # Firmware
-vendor/firmware/APBargeIn_AUDIO_SLSI.bin
-vendor/firmware/APBiBF_AUDIO_SLSI.bin
-vendor/firmware/APDV_AUDIO_SLSI.bin
-vendor/firmware/AP_AUDIO_SLSI.bin
-vendor/firmware/SoundBoosterParam.bin
-vendor/firmware/calliope_dram.bin
-vendor/firmware/calliope_sram.bin
-vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw
-vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw
-vendor/firmware/cs40l25a_samsung.wmfw
-vendor/firmware/dax_param.bin
-vendor/firmware/default_configuration.flm.cfg.bin
-vendor/firmware/gk2x_firmware.bin
-vendor/firmware/mfc_fw.bin
-vendor/firmware/setfile_2l4.bin
-vendor/firmware/setfile_3j1.bin
-vendor/firmware/setfile_3m3.bin
-vendor/firmware/setfile_3p9.bin
-vendor/firmware/setfile_4ha.bin
-vendor/firmware/setfile_gm1.bin
-vendor/firmware/setfile_gw1.bin
-vendor/firmware/setfile_hm1.bin
-vendor/firmware/setfile_imx374.bin
-vendor/firmware/setfile_imx471.bin
-vendor/firmware/setfile_imx555.bin
-vendor/firmware/setfile_imx563.bin
-vendor/firmware/setfile_imx616.bin
-vendor/firmware/setfile_jn1.bin
-vendor/firmware/txse4.bin
-vendor/firmware/tzsw.bin
+firmware/mfc_fw.bin
 
-# Fingerprint
-vendor/lib/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-impl.so
-vendor/lib/libbauthserver.so
-vendor/lib/libbauthtzcommon.so
-vendor/lib64/libbauthserver.so
-vendor/lib64/libbauthtzcommon.so
-vendor/lib64/libegis_fp_normal_sensor_test.so
-vendor/lib64/libgf_in_system_lib.so
-vendor/lib64/libqfp_sensortest.so
-vendor/lib64/libsynaFpSensorTestNwd.so
+# Framework libraries
+lib/android.frameworks.cameraservice.common@2.0.so
+lib/android.frameworks.cameraservice.device@2.0.so
+lib/android.frameworks.cameraservice.device@2.1.so
+lib/android.frameworks.cameraservice.service@2.0.so
+lib/android.frameworks.cameraservice.service@2.1.so
+lib/android.frameworks.cameraservice.service@2.2.so
+lib/android.frameworks.sensorservice@1.0.so
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.exynos2200.so
-vendor/lib64/hw/gatekeeper.exynos2200.so
+# Hardware libraries - audio
+lib/android.hardware.audio.common-util.so
+lib/android.hardware.audio.common@2.0-util.so
+lib/android.hardware.audio.common@5.0.so
+lib/android.hardware.audio.common@6.0.so
+lib/android.hardware.audio.effect@2.0-util.so
+lib/android.hardware.audio.effect@2.0.so
+lib/android.hardware.audio.effect@6.0-util.so
+lib/android.hardware.audio.effect@6.0.so
+lib/android.hardware.audio@2.0.so
+lib/android.hardware.audio@6.0.so
 
-# GPS
-vendor/bin/hw/gpsd
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
-vendor/etc/gnss/gps.xml
-vendor/etc/init/gpsd.rc
-vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
-vendor/lib/hw/android.hardware.gnss@2.1-impl.so
-vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl.so
-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
+# Hardware libraries - bluetooth
+lib/android.hardware.bluetooth@1.0.so
 
-# Graphics
-vendor/lib/egl/libGLES_mali.so
-vendor/lib/hw/gralloc.exynos2200.so
-vendor/lib/hw/hwcomposer.exynos2200.so
-vendor/lib/hw/memtrack.exynos2200.so
-vendor/lib/hw/vulkan.mali.so
-vendor/lib/libExynosHWCService.so
-vendor/lib/libGLESOverlay.so
-vendor/lib/libgpudataproducer.so
-vendor/lib64/egl/libGLES_mali.so
-vendor/lib64/hw/gralloc.exynos2200.so
-vendor/lib64/hw/hwcomposer.exynos2200.so
-vendor/lib64/hw/memtrack.exynos2200.so
-vendor/lib64/hw/vulkan.mali.so
-vendor/lib64/libExynosHWCService.so
-vendor/lib64/libGLESOverlay.so
-vendor/lib64/libgpudataproducer.so
+# Hardware libraries - other
+lib/android.hardware.gatekeeper@1.0.so
+lib/android.hardware.health@2.0.so
+lib/android.hardware.health@2.1.so
+lib/android.hardware.power@1.0.so
+lib/android.hardware.sensors@1.0.so
+lib/android.hardware.sensors@2.0.so
+lib/android.hardware.sensors@2.1.so
+lib/android.hardware.thermal@1.0.so
+lib/android.hardware.thermal@2.0.so
+lib/android.hardware.wifi@1.0.so
+lib/android.hardware.wifi@1.1.so
+lib/android.hardware.wifi@1.2.so
+lib/android.hardware.wifi@1.3.so
+lib/android.hardware.wifi@1.4.so
 
-# Keymaster
-vendor/lib/hw/keystore.mdfpp.so
-vendor/lib64/hw/keystore.mdfpp.so
-vendor/lib64/libkeymaster_helper.so
-vendor/lib64/libskeymaster4device.so
+# Audio HALs
+lib/hw/audio.r_submix.default.so
+lib/hw/audio.usb.default.so
 
-# Media
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles_V1_0.xml
-vendor/lib/libExynosOMX_Core.so
-vendor/lib/libExynosOMX_Resourcemanager.so
-vendor/lib/libstagefrighthw.so
-vendor/lib64/libExynosOMX_Core.so
-vendor/lib64/libExynosOMX_Resourcemanager.so
-vendor/lib64/libstagefrighthw.so
+# Vendor libraries
+lib/libExynosHWCService.so
+lib/libOpenCL.so
+lib/libcsc.so
+lib/libgui_vendor.so
+lib/libion_exynos.so
+lib/libsecnativefeature.so
+lib/libsecril-client.so
+lib/libsecure_storage.so
+lib/libstagefright_foundation_vendor.so
 
-# NFC
-vendor/bin/hw/sec.android.hardware.nfc@1.2-service
-vendor/etc/init/sec.android.hardware.nfc@1.2-service.rc
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-sec-vendor.conf
-vendor/firmware/nfc/sec_s3nrn4v_firmware.bin
-vendor/lib64/nfc_nci_sec.so
-vendor/lib64/hw/nfc_nci.sec.so
+# Framework libraries (64-bit)
+lib64/android.frameworks.cameraservice.common@2.0.so
+lib64/android.frameworks.cameraservice.device@2.0.so
+lib64/android.frameworks.cameraservice.device@2.1.so
+lib64/android.frameworks.cameraservice.service@2.0.so
+lib64/android.frameworks.cameraservice.service@2.1.so
+lib64/android.frameworks.cameraservice.service@2.2.so
+lib64/android.frameworks.sensorservice@1.0.so
 
-# RIL
-vendor/bin/hw/rild
-vendor/bin/cbd
-vendor/etc/init/rild.rc
-vendor/lib/libreference-ril.so
-vendor/lib/libril.so
-vendor/lib/libsec-ril.so
-vendor/lib/libsec-ril-dsds.so
-vendor/lib64/libreference-ril.so
-vendor/lib64/libril.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libsec-ril-dsds.so
+# Hardware libraries - audio (64-bit)
+lib64/android.hardware.audio.common-util.so
+lib64/android.hardware.audio.common@2.0-util.so
+lib64/android.hardware.audio.common@5.0.so
+lib64/android.hardware.audio.common@6.0-util.so
+lib64/android.hardware.audio.common@6.0.so
+lib64/android.hardware.audio.effect@2.0-util.so
+lib64/android.hardware.audio.effect@2.0.so
+lib64/android.hardware.audio.effect@6.0-util.so
+lib64/android.hardware.audio.effect@6.0.so
+lib64/android.hardware.audio@2.0-util.so
+lib64/android.hardware.audio@2.0.so
+lib64/android.hardware.audio@6.0-util.so
+lib64/android.hardware.audio@6.0.so
 
-# Sensors
-vendor/etc/sensors/hals.conf
-vendor/lib/hw/sensors.exynos2200.so
-vendor/lib/libsensorlistener.so
-vendor/lib64/hw/sensors.exynos2200.so
-vendor/lib64/libsensorlistener.so
-vendor/lib64/libsensorndkbridge.so
-vendor/lib64/sensors.sensorhub.so
+# Hardware libraries - biometrics (64-bit)
+lib64/android.hardware.biometrics.fingerprint@2.1.so
 
-# Widevine
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
-vendor/lib/libwvhidl.so
-vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libwvdrmengine.so
+# Hardware libraries - other (64-bit)
+lib64/android.hardware.bluetooth@1.0.so
+lib64/android.hardware.drm@1.0.so
+lib64/android.hardware.drm@1.1.so
+lib64/android.hardware.drm@1.2.so
+lib64/android.hardware.drm@1.3.so
+lib64/android.hardware.drm@1.4.so
+lib64/android.hardware.gatekeeper@1.0.so
+lib64/android.hardware.gnss@1.0.so
+lib64/android.hardware.gnss@1.1.so
+lib64/android.hardware.gnss@2.0.so
+lib64/android.hardware.gnss@2.1.so
+lib64/android.hardware.graphics.composer@2.1.so
+lib64/android.hardware.graphics.composer@2.2.so
+lib64/android.hardware.graphics.composer@2.3.so
+lib64/android.hardware.graphics.composer@2.4.so
+lib64/android.hardware.health@2.0.so
+lib64/android.hardware.health@2.1.so
+lib64/android.hardware.keymaster@3.0.so
+lib64/android.hardware.keymaster@4.0.so
+lib64/android.hardware.keymaster@4.1.so
+lib64/android.hardware.nfc@1.0.so
+lib64/android.hardware.nfc@1.1.so
+lib64/android.hardware.nfc@1.2.so
+lib64/android.hardware.power@1.0.so
+lib64/android.hardware.radio.config@1.0.so
+lib64/android.hardware.radio.config@1.1.so
+lib64/android.hardware.radio.config@1.2.so
+lib64/android.hardware.radio.config@1.3.so
+lib64/android.hardware.radio@1.0.so
+lib64/android.hardware.radio@1.1.so
+lib64/android.hardware.radio@1.2.so
+lib64/android.hardware.radio@1.3.so
+lib64/android.hardware.radio@1.4.so
+lib64/android.hardware.radio@1.5.so
+lib64/android.hardware.radio@1.6.so
+lib64/android.hardware.sensors@1.0.so
+lib64/android.hardware.sensors@2.0.so
+lib64/android.hardware.sensors@2.1.so
+lib64/android.hardware.thermal@1.0.so
+lib64/android.hardware.thermal@2.0.so
+lib64/android.hardware.usb@1.0.so
+lib64/android.hardware.usb@1.1.so
+lib64/android.hardware.usb@1.2.so
+lib64/android.hardware.usb@1.3.so
+lib64/android.hardware.wifi.hostapd@1.0.so
+lib64/android.hardware.wifi.hostapd@1.1.so
+lib64/android.hardware.wifi.hostapd@1.2.so
+lib64/android.hardware.wifi.hostapd@1.3.so
+lib64/android.hardware.wifi.supplicant@1.0.so
+lib64/android.hardware.wifi.supplicant@1.1.so
+lib64/android.hardware.wifi.supplicant@1.2.so
+lib64/android.hardware.wifi.supplicant@1.3.so
+lib64/android.hardware.wifi.supplicant@1.4.so
+lib64/android.hardware.wifi@1.0.so
+lib64/android.hardware.wifi@1.1.so
+lib64/android.hardware.wifi@1.2.so
+lib64/android.hardware.wifi@1.3.so
+lib64/android.hardware.wifi@1.4.so
+lib64/android.hardware.wifi@1.5.so
 
-# Wi-Fi
-vendor/bin/hw/macloader
-vendor/etc/init/wifi.rc
-vendor/etc/init/wifi_slsi.rc
-vendor/etc/wifi/indoorchannel.info
-vendor/etc/wifi/mx140.bin
-vendor/etc/wifi/mx140_bt.hcf
-vendor/etc/wifi/mx140_t.bin
-vendor/etc/wifi/mx140_t_wlan.hcf
-vendor/etc/wifi/mx140_t_wlan_t.hcf
-vendor/etc/wifi/mx140_wlan.hcf
-vendor/etc/wifi/mx140_wlan_t.hcf
-vendor/etc/wifi/p2p_supplicant_overlay.conf
-vendor/etc/wifi/wpa_supplicant.conf
-vendor/etc/wifi/wpa_supplicant_overlay.conf
-vendor/lib/hw/wifiexts.exynos2200.so
-vendor/lib/libwifi-hal.so
-vendor/lib64/hw/wifiexts.exynos2200.so
-vendor/lib64/libwifi-hal.so
-vendor/lib64/android.hardware.sensors@2.1.so
-
-# Power libraries
-vendor/lib/android.hardware.power@1.0.so
+# Vendor libraries (64-bit)
+lib64/libExynosHWCService.so
+lib64/libOpenCL.so
+lib64/libcsc.so
+lib64/libgui_vendor.so
+lib64/libion_exynos.so
+lib64/liblowi_client.so
+lib64/librilutils.so
+lib64/libsec-ril.so
+lib64/libsecnativefeature.so
+lib64/libsecril-client.so
+lib64/libsecure_storage.so
+lib64/libsensorlistener.so
+lib64/libstagefright_foundation_vendor.so
+lib64/libwvhidl.so
 vendor/lib/android.hardware.power@1.1.so
 vendor/lib/android.hardware.power@1.2.so
 vendor/lib/android.hardware.power@1.3.so
