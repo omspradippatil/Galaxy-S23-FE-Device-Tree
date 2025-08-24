@@ -231,8 +231,8 @@ if [ "$SRC" = "vendor" ]; then
         exit 1
     fi
     
-    # Mount vendor image
-    local mount_point="vendor_mount"
+    # Mount vendor image - FIX: Removed 'local' keyword outside of function
+    mount_point="vendor_mount"
     if ! mount_vendor_img "vendor.img" "$mount_point"; then
         echo ""
         echo "Failed to mount vendor.img. This could be due to:"
@@ -313,7 +313,7 @@ if [ "$SRC" = "lineage" ]; then
     setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
     
     # Create minimal vendor structure
-    local vendor_dir="${ANDROID_ROOT}/vendor/${VENDOR}/${DEVICE}"
+    vendor_dir="${ANDROID_ROOT}/vendor/${VENDOR}/${DEVICE}"
     mkdir -p "$vendor_dir"
     
     # Create minimal makefiles
