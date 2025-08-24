@@ -61,14 +61,17 @@ function blob_fixup() {
         vendor/lib*/hw/audio.primary.*.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/lib64/hw/gatekeeper.exynos2200.so | vendor/lib/hw/gatekeeper.exynos2200.so)
+        vendor/lib*/hw/gatekeeper.*.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/lib64/libwrappergps.so | vendor/lib/libwrappergps.so)
+        vendor/lib*/libwrappergps.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
         vendor/lib*/vendor.samsung.hardware.*.so)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
+        vendor/lib*/libril.so)
+            echo "Processing RIL library: ${1}"
             ;;
     esac
 }
@@ -83,11 +86,13 @@ if [ "$SRC" = "vendor" ]; then
     echo "Extracting from S711BXXS1AWJ7 vendor.img..."
     # Extract vendor.img
     mkdir -p vendor_mount
-    sudo mount -o loop vendor.img vendor_mount
-    SRC="vendor_mount"
+    sudo mount -o loop,ro vendor.img vendor_mount
     
-    # Extract the files
-    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    # Initialize the helper for vendor extraction
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+    
+    # Extract the files from mounted vendor
+    extract "${MY_DIR}/proprietary-files.txt" "vendor_mount" "${KANG}" --section "${SECTION}"
     
     # Cleanup
     sudo umount vendor_mount

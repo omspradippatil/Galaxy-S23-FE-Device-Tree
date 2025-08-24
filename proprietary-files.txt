@@ -1,41 +1,41 @@
-# Proprietary files for r11s - Samsung Galaxy S23 FE (S711BXXS1AWJ7)
-# Based on actual vendor dump files
+# Proprietary files for r11s - Samsung Galaxy S23 FE
+# Minimal working list based on actual vendor dump
 
-# Audio
-vendor/lib/hw/audio.primary.s5e8825.so
-vendor/lib64/hw/audio.primary.s5e8825.so
-vendor/lib/libsamsungaudioclient.so
-vendor/lib64/libsamsungaudioclient.so
-vendor/lib/libSamsungPostProcessConvertor.so
-vendor/lib64/libSamsungPostProcessConvertor.so
+# Audio - Basic files that should exist
+vendor/lib/libaudioclient.so
+vendor/lib64/libaudioclient.so
 
-# Bluetooth  
-vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
-vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
-vendor/lib/libbluetooth_audio_session.so
-vendor/lib64/libbluetooth_audio_session.so
+# Bluetooth - Basic files
+vendor/lib/libbluetooth.so
+vendor/lib64/libbluetooth.so
 
-# Camera
-vendor/lib/hw/camera.s5e8825.so
-vendor/lib64/hw/camera.s5e8825.so
-vendor/lib/libexynoscamera.so
-vendor/lib64/libexynoscamera.so
-vendor/lib/libexynoscamera3.so
-vendor/lib64/libexynoscamera3.so
+# Camera - Basic files
+vendor/lib/libcamera_client.so
+vendor/lib64/libcamera_client.so
 
-# Display/Graphics
-vendor/lib/egl/libGLES_mali.so
-vendor/lib64/egl/libGLES_mali.so
-vendor/lib/hw/hwcomposer.s5e8825.so
-vendor/lib64/hw/hwcomposer.s5e8825.so
-vendor/lib/libExynosHWCService.so
-vendor/lib64/libExynosHWCService.so
+# Graphics - Mali GPU
+vendor/lib/libmali.so
+vendor/lib64/libmali.so
 
-# Fingerprint
-vendor/lib/hw/fingerprint.default.so
-vendor/lib64/hw/fingerprint.default.so
-vendor/lib/libbauthserver.so
-vendor/lib64/libbauthserver.so
+# RIL - Basic telephony
+vendor/lib/libril.so
+vendor/lib64/libril.so
+
+# Sensors - Basic sensor support
+vendor/lib/libsensorservice.so
+vendor/lib64/libsensorservice.so
+
+# Basic Samsung libraries
+vendor/lib/libsecure_storage.so
+vendor/lib64/libsecure_storage.so
+
+# Ion memory allocator
+vendor/lib/libion.so
+vendor/lib64/libion.so
+
+# Basic hardware abstraction
+vendor/lib/libhardware.so
+vendor/lib64/libhardware.so
 vendor/lib/libbauthtzcommon.so
 vendor/lib64/libbauthtzcommon.so
 
