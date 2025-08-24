@@ -1,46 +1,46 @@
-# Proprietary files for r11s - Samsung Galaxy S23 FE
-# Minimal working list based on actual vendor dump
+# Minimal proprietary files for Samsung Galaxy S23 FE (r11s)
+# Only including files that should actually exist in vendor partition
 
-# Audio - Basic files that should exist
+# Essential libraries that are typically present
+vendor/lib/liblog.so
+vendor/lib64/liblog.so
+vendor/lib/libcutils.so
+vendor/lib64/libcutils.so
+vendor/lib/libutils.so
+vendor/lib64/libutils.so
+vendor/lib/libbinder.so
+vendor/lib64/libbinder.so
+
+# Basic Samsung libraries (if they exist)
+vendor/lib/libsecure_storage.so
+vendor/lib64/libsecure_storage.so
+vendor/lib/libsecril-client.so
+vendor/lib64/libsecril-client.so
+
+# Graphics (Mali GPU - actual filenames may vary)
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so
+
+# Audio
 vendor/lib/libaudioclient.so
 vendor/lib64/libaudioclient.so
 
-# Bluetooth - Basic files
-vendor/lib/libbluetooth.so
-vendor/lib64/libbluetooth.so
+# RIL
+vendor/lib/libril.so
+vendor/lib64/libril.so
+vendor/bin/rild
 
-# Camera - Basic files
+# Camera
 vendor/lib/libcamera_client.so
 vendor/lib64/libcamera_client.so
 
-# Graphics - Mali GPU
-vendor/lib/libmali.so
-vendor/lib64/libmali.so
-
-# RIL - Basic telephony
-vendor/lib/libril.so
-vendor/lib64/libril.so
-
-# Sensors - Basic sensor support
+# Sensors
 vendor/lib/libsensorservice.so
 vendor/lib64/libsensorservice.so
 
-# Basic Samsung libraries
-vendor/lib/libsecure_storage.so
-vendor/lib64/libsecure_storage.so
-
-# Ion memory allocator
-vendor/lib/libion.so
-vendor/lib64/libion.so
-
-# Basic hardware abstraction
+# Hardware abstraction
 vendor/lib/libhardware.so
 vendor/lib64/libhardware.so
-vendor/lib/libbauthtzcommon.so
-vendor/lib64/libbauthtzcommon.so
-
-# Gatekeeper
-vendor/lib/hw/gatekeeper.s5e8825.so
 vendor/lib64/hw/gatekeeper.s5e8825.so
 
 # GPS/GNSS
