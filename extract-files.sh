@@ -73,11 +73,6 @@ function blob_fixup() {
     esac
 }
 
-# Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
-
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
-
 # Add vendor.img extraction support for AWJ7
 if [ "$SRC" = "vendor" ]; then
     if [ ! -f vendor.img ]; then
@@ -90,12 +85,21 @@ if [ "$SRC" = "vendor" ]; then
     mkdir -p vendor_mount
     sudo mount -o loop vendor.img vendor_mount
     SRC="vendor_mount"
-fi
-
-"${MY_DIR}/setup-makefiles.sh"
-
-# Cleanup vendor mount if used
-if [ "$SRC" = "vendor_mount" ]; then
+    
+    # Extract the files
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+    
+    # Cleanup
     sudo umount vendor_mount
     rmdir vendor_mount
+    
+    "${MY_DIR}/setup-makefiles.sh"
+    exit 0
 fi
+
+# Initialize the helper
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+
+"${MY_DIR}/setup-makefiles.sh"

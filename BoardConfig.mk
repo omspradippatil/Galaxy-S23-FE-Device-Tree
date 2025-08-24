@@ -40,13 +40,13 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Kernel
 TARGET_KERNEL_CONFIG := r11s_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos2200
+TARGET_KERNEL_SOURCE := kernel/samsung/s5e8825
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_CLANG_COMPILE := true
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.hardware=s5e8825
 
 # Display
-TARGET_SCREEN_DENSITY := 450
+TARGET_SCREEN_DENSITY := 420
 
 # Partitions - Updated for Android 13
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296

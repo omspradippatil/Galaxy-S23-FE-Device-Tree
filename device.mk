@@ -33,7 +33,9 @@ PRODUCT_TARGET_VNDK_VERSION := 33
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=33 \
     ro.vendor.build.security_patch=2024-01-01 \
-    ro.vendor.build.fingerprint=samsung/r11sxxx/r11s:13/TP1A.220624.014/S711BXXS1AWJ7:user/release-keys
+    ro.vendor.build.fingerprint=samsung/r11sxxx/r11s:13/TP1A.220624.014/S711BXXS1AWJ7:user/release-keys \
+    ro.hardware=s5e8825 \
+    ro.hardware.chipname=s5e8825
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal

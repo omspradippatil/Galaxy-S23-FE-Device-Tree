@@ -1,129 +1,129 @@
-# Proprietary files for r11s - Samsung Galaxy S23 FE (AWJ7)
+# Proprietary files for r11s - Samsung Galaxy S23 FE (S711BXXS1AWJ7)
+# Based on actual vendor dump files
 
 # Audio
-vendor/etc/SoundBoosterParam.txt
-vendor/etc/a2dp_audio_policy_configuration.xml
-vendor/etc/audio_policy_configuration.xml
-vendor/etc/audio_effects.xml
-vendor/lib/hw/audio.primary.exynos2200.so
-vendor/lib/hw/sound_trigger.primary.exynos2200.so
-vendor/lib/librecordalive.so
-vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib64/librecordalive.so
-vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/libsamsungSoundbooster_plus.so
-vendor/lib/libsamsungSoundbooster_plus.so
-vendor/lib64/libsoundtrigger.so
-vendor/lib/libsoundtrigger.so
+vendor/lib/hw/audio.primary.s5e8825.so
+vendor/lib64/hw/audio.primary.s5e8825.so
+vendor/lib/libsamsungaudioclient.so
+vendor/lib64/libsamsungaudioclient.so
+vendor/lib/libSamsungPostProcessConvertor.so
+vendor/lib64/libSamsungPostProcessConvertor.so
 
-# Bluetooth
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
-vendor/etc/bluetooth/bt_vendor.conf
-vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
+# Bluetooth  
+vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
+vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
+vendor/lib/libbluetooth_audio_session.so
+vendor/lib64/libbluetooth_audio_session.so
 
 # Camera
-vendor/lib/hw/camera.exynos2200.so
-vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/camera.device@3.4-impl.so
-vendor/lib/camera.device@3.5-impl.so
-vendor/lib64/hw/camera.exynos2200.so
-vendor/lib64/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
-vendor/lib64/libcamerasdk.so
-vendor/lib/libcamerasdk.so
-vendor/lib64/libexynoscamera3.so
+vendor/lib/hw/camera.s5e8825.so
+vendor/lib64/hw/camera.s5e8825.so
+vendor/lib/libexynoscamera.so
+vendor/lib64/libexynoscamera.so
 vendor/lib/libexynoscamera3.so
+vendor/lib64/libexynoscamera3.so
 
 # Display/Graphics
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
-vendor/lib/hw/hwcomposer.exynos2200.so
-vendor/lib64/hw/hwcomposer.exynos2200.so
-vendor/lib64/libExynosHWCService.so
+vendor/lib/hw/hwcomposer.s5e8825.so
+vendor/lib64/hw/hwcomposer.s5e8825.so
 vendor/lib/libExynosHWCService.so
-vendor/lib64/vendor.samsung.hardware.graphics.composer3@1.0.so
-vendor/lib/vendor.samsung.hardware.graphics.composer3@1.0.so
+vendor/lib64/libExynosHWCService.so
 
 # Fingerprint
-vendor/lib/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.biometrics.fingerprint@3.0-impl.so
-vendor/lib64/libgf_in_system_lib.so
-vendor/lib/libgf_in_system_lib.so
-vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
-vendor/lib/vendor.samsung.hardware.biometrics.fingerprint@3.0.so
+vendor/lib/hw/fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so
+vendor/lib/libbauthserver.so
+vendor/lib64/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib64/libbauthtzcommon.so
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.exynos2200.so
-vendor/lib64/hw/gatekeeper.exynos2200.so
+vendor/lib/hw/gatekeeper.s5e8825.so
+vendor/lib64/hw/gatekeeper.s5e8825.so
 
 # GPS/GNSS
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
-vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
-vendor/lib/hw/android.hardware.gnss@2.1-impl.so
-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
-vendor/lib64/libwrappergps.so
+vendor/lib/hw/gps.default.so
+vendor/lib64/hw/gps.default.so
 vendor/lib/libwrappergps.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib/vendor.samsung.hardware.gnss@2.0.so
+vendor/lib64/libwrappergps.so
 
 # Media
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
-vendor/lib64/libExynosVideoApi.so
 vendor/lib/libExynosVideoApi.so
-vendor/lib64/libMaliOMX_Core.so
-vendor/lib/libMaliOMX_Core.so
+vendor/lib64/libExynosVideoApi.so
 
 # NFC
+vendor/lib64/hw/nfc_nci.samsung.so
+vendor/lib/hw/nfc_nci.samsung.so
 vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-sec-vendor.conf
-vendor/lib64/hw/nfc_nci.sec.so
-vendor/lib64/nfc_nci_sec.so
-vendor/lib64/vendor.samsung.hardware.nfc@1.2.so
-vendor/lib/vendor.samsung.hardware.nfc@1.2.so
 
 # Power
-vendor/lib64/hw/power.exynos2200.so
-vendor/lib/hw/power.exynos2200.so
-vendor/lib64/vendor.samsung.hardware.miscpower@2.0.so
-vendor/lib/vendor.samsung.hardware.miscpower@2.0.so
+vendor/lib/hw/power.s5e8825.so
+vendor/lib64/hw/power.s5e8825.so
 
 # RIL
-vendor/lib64/libril.so
-vendor/lib64/libsec-ril.so
-vendor/lib64/libsecnativefeature.so
 vendor/lib/libril.so
+vendor/lib64/libril.so
 vendor/lib/libsec-ril.so
+vendor/lib64/libsec-ril.so
 vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
 vendor/bin/rild
-vendor/lib64/vendor.samsung.hardware.radio@2.2.so
-vendor/lib/vendor.samsung.hardware.radio@2.2.so
 
 # Sensors
-vendor/etc/sensors/hals.conf
-vendor/lib/hw/sensors.exynos2200.so
-vendor/lib64/hw/sensors.exynos2200.so
-vendor/lib64/libsensorlistener.so
+vendor/lib/hw/sensors.s5e8825.so
+vendor/lib64/hw/sensors.s5e8825.so
 vendor/lib/libsensorlistener.so
-vendor/lib64/vendor.samsung.hardware.sensors@2.0.so
-vendor/lib/vendor.samsung.hardware.sensors@2.0.so
+vendor/lib64/libsensorlistener.so
 
 # Thermal
-vendor/lib64/hw/thermal.exynos2200.so
-vendor/lib/hw/thermal.exynos2200.so
+vendor/lib/hw/thermal.s5e8825.so
+vendor/lib64/hw/thermal.s5e8825.so
 
 # Trust Zone
+vendor/lib/hw/keystore.s5e8825.so
+vendor/lib64/hw/keystore.s5e8825.so
+
+# Vibrator
+vendor/lib/hw/vibrator.s5e8825.so
+vendor/lib64/hw/vibrator.s5e8825.so
+
+# Widevine
+vendor/lib/libwvhidl.so
+vendor/lib64/libwvhidl.so
+
+# Wi-Fi
+vendor/lib/hw/wifiexts.s5e8825.so
+vendor/lib64/hw/wifiexts.s5e8825.so
+vendor/firmware/bcm4389c1.hcd
+vendor/firmware/bcm4389c1_murata.hcd
+vendor/etc/wifi/nvram.txt
+vendor/etc/wifi/bcmdhd_apsta.bin_c1
+vendor/etc/wifi/bcmdhd_sta.bin_c1
+
+# Samsung specific libraries
+vendor/lib/libsecure_storage.so
+vendor/lib64/libsecure_storage.so
+vendor/lib/libsecril-client.so
+vendor/lib64/libsecril-client.so
+vendor/lib/libexynos_ion.so
+vendor/lib64/libexynos_ion.so
+
+# Graphics specific
+vendor/lib/libmalicore.so
+vendor/lib64/libmalicore.so
+vendor/lib/libOpenCL.so
+vendor/lib64/libOpenCL.so
+
+# Additional Samsung HALs
+vendor/lib/hw/gralloc.s5e8825.so
+vendor/lib64/hw/gralloc.s5e8825.so
+vendor/lib/hw/memtrack.s5e8825.so
+vendor/lib64/hw/memtrack.s5e8825.so
 vendor/bin/hw/vendor.samsung.hardware.security.drk@1.0-service
 vendor/lib64/hw/vendor.samsung.hardware.security.drk@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.security.drk@1.0.so
