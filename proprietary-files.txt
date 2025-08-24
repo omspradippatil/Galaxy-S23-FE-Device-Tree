@@ -1,5 +1,5 @@
-# Proprietary files for Samsung Galaxy S23 FE (r11s)
-# Complete list including all required files
+# Complete proprietary files for Samsung Galaxy S23 FE (r11s)
+# All vendor files that exist in Samsung devices
 
 # Binaries
 vendor/bin/abox_log
@@ -11,6 +11,42 @@ vendor/bin/rild
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/bin/hw/macloader
 vendor/bin/hw/vendor.samsung.hardware.security.drk@1.0-service
+vendor/bin/secril_config_svc
+vendor/bin/vaultkeeper_client
+vendor/bin/thermal_symlinks.sh
+vendor/bin/wcnss_filter
+vendor/bin/wlbtd
+vendor/bin/gpsd
+vendor/bin/lhd
+vendor/bin/sensorservice
+vendor/bin/charge_only_mode
+vendor/bin/dump_gpr.sh
+vendor/bin/imsqmidaemon
+vendor/bin/imsdatadaemon
+vendor/bin/ims_rtp_daemon
+vendor/bin/imscmservice
+vendor/bin/vendor_flash_recovery.sh
+vendor/bin/hw/android.hardware.audio@7.0-service.samsung
+vendor/bin/hw/android.hardware.audio.effect@7.0-service.samsung
+vendor/bin/hw/android.hardware.bluetooth@1.0-service.samsung
+vendor/bin/hw/android.hardware.camera.provider@2.6-service.samsung
+vendor/bin/hw/android.hardware.drm@1.4-service.clearkey
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service.samsung
+vendor/bin/hw/android.hardware.gnss@2.1-service.samsung
+vendor/bin/hw/android.hardware.graphics.allocator@4.0-service.samsung
+vendor/bin/hw/android.hardware.health@2.1-service.samsung
+vendor/bin/hw/android.hardware.keymaster@4.1-service.samsung
+vendor/bin/hw/android.hardware.light@2.0-service.samsung
+vendor/bin/hw/android.hardware.memtrack@1.0-service.samsung
+vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
+vendor/bin/hw/android.hardware.power@1.2-service.samsung
+vendor/bin/hw/android.hardware.radio@1.6-service.samsung
+vendor/bin/hw/android.hardware.radio.config@1.3-service.samsung
+vendor/bin/hw/android.hardware.sensors@2.1-service.samsung-multihal
+vendor/bin/hw/android.hardware.thermal@2.0-service.samsung
+vendor/bin/hw/android.hardware.usb@1.3-service.samsung
+vendor/bin/hw/android.hardware.vibrator@1.3-service.samsung
+vendor/bin/hw/android.hardware.wifi@1.0-service
 
 # Configuration files
 vendor/etc/btcon.json
@@ -18,16 +54,20 @@ vendor/etc/ems.json
 
 # Audio HAL libraries
 vendor/lib/android.hardware.audio@2.0.so
+vendor/lib/android.hardware.audio@7.0.so
 vendor/lib/android.hardware.audio@6.0.so
 vendor/lib/android.hardware.audio.common@2.0-util.so
 vendor/lib/android.hardware.audio.common@5.0.so
 vendor/lib/android.hardware.audio.common@6.0.so
+vendor/lib/android.hardware.audio.common@7.0.so
 vendor/lib/android.hardware.audio.common-util.so
 vendor/lib/android.hardware.audio.effect@2.0.so
 vendor/lib/android.hardware.audio.effect@2.0-util.so
 vendor/lib/android.hardware.audio.effect@6.0.so
 vendor/lib/android.hardware.audio.effect@6.0-util.so
+vendor/lib/android.hardware.audio.effect@7.0.so
 vendor/lib64/android.hardware.audio@2.0.so
+vendor/lib64/android.hardware.audio@7.0.so
 vendor/lib64/android.hardware.audio@2.0-util.so
 vendor/lib64/android.hardware.audio@6.0.so
 vendor/lib64/android.hardware.audio@6.0-util.so
@@ -35,11 +75,13 @@ vendor/lib64/android.hardware.audio.common@2.0-util.so
 vendor/lib64/android.hardware.audio.common@5.0.so
 vendor/lib64/android.hardware.audio.common@6.0.so
 vendor/lib64/android.hardware.audio.common@6.0-util.so
+vendor/lib64/android.hardware.audio.common@7.0.so
 vendor/lib64/android.hardware.audio.common-util.so
 vendor/lib64/android.hardware.audio.effect@2.0.so
 vendor/lib64/android.hardware.audio.effect@2.0-util.so
 vendor/lib64/android.hardware.audio.effect@6.0.so
 vendor/lib64/android.hardware.audio.effect@6.0-util.so
+vendor/lib64/android.hardware.audio.effect@7.0.so
 
 # Camera framework libraries
 vendor/lib/android.frameworks.cameraservice.common@2.0.so
@@ -59,6 +101,206 @@ vendor/lib64/android.frameworks.cameraservice.service@2.2.so
 vendor/lib/android.frameworks.sensorservice@1.0.so
 vendor/lib64/android.frameworks.sensorservice@1.0.so
 
+# DRM libraries
+vendor/lib/android.hardware.drm@1.0.so
+vendor/lib/android.hardware.drm@1.1.so
+vendor/lib/android.hardware.drm@1.2.so
+vendor/lib/android.hardware.drm@1.3.so
+vendor/lib/android.hardware.drm@1.4.so
+vendor/lib64/android.hardware.drm@1.0.so
+vendor/lib64/android.hardware.drm@1.1.so
+vendor/lib64/android.hardware.drm@1.2.so
+vendor/lib64/android.hardware.drm@1.3.so
+vendor/lib64/android.hardware.drm@1.4.so
+
+# Graphics libraries
+vendor/lib/android.hardware.graphics.allocator@2.0.so
+vendor/lib/android.hardware.graphics.allocator@3.0.so
+vendor/lib/android.hardware.graphics.allocator@4.0.so
+vendor/lib/android.hardware.graphics.composer@2.1.so
+vendor/lib/android.hardware.graphics.composer@2.2.so
+vendor/lib/android.hardware.graphics.composer@2.3.so
+vendor/lib/android.hardware.graphics.composer@2.4.so
+vendor/lib/android.hardware.graphics.mapper@2.0.so
+vendor/lib/android.hardware.graphics.mapper@2.1.so
+vendor/lib/android.hardware.graphics.mapper@3.0.so
+vendor/lib/android.hardware.graphics.mapper@4.0.so
+vendor/lib64/android.hardware.graphics.allocator@2.0.so
+vendor/lib64/android.hardware.graphics.allocator@3.0.so
+vendor/lib64/android.hardware.graphics.allocator@4.0.so
+vendor/lib64/android.hardware.graphics.composer@2.1.so
+vendor/lib64/android.hardware.graphics.composer@2.2.so
+vendor/lib64/android.hardware.graphics.composer@2.3.so
+vendor/lib64/android.hardware.graphics.composer@2.4.so
+vendor/lib64/android.hardware.graphics.mapper@2.0.so
+vendor/lib64/android.hardware.graphics.mapper@2.1.so
+vendor/lib64/android.hardware.graphics.mapper@3.0.so
+vendor/lib64/android.hardware.graphics.mapper@4.0.so
+
+# Radio/RIL libraries
+vendor/lib/android.hardware.radio@1.0.so
+vendor/lib/android.hardware.radio@1.1.so
+vendor/lib/android.hardware.radio@1.2.so
+vendor/lib/android.hardware.radio@1.3.so
+vendor/lib/android.hardware.radio@1.4.so
+vendor/lib/android.hardware.radio@1.5.so
+vendor/lib/android.hardware.radio@1.6.so
+vendor/lib/android.hardware.radio.config@1.0.so
+vendor/lib/android.hardware.radio.config@1.1.so
+vendor/lib/android.hardware.radio.config@1.2.so
+vendor/lib/android.hardware.radio.config@1.3.so
+vendor/lib64/android.hardware.radio@1.0.so
+vendor/lib64/android.hardware.radio@1.1.so
+vendor/lib64/android.hardware.radio@1.2.so
+vendor/lib64/android.hardware.radio@1.3.so
+vendor/lib64/android.hardware.radio@1.4.so
+vendor/lib64/android.hardware.radio@1.5.so
+vendor/lib64/android.hardware.radio@1.6.so
+vendor/lib64/android.hardware.radio.config@1.0.so
+vendor/lib64/android.hardware.radio.config@1.1.so
+vendor/lib64/android.hardware.radio.config@1.2.so
+vendor/lib64/android.hardware.radio.config@1.3.so
+
+# WiFi libraries
+vendor/lib/android.hardware.wifi@1.0.so
+vendor/lib/android.hardware.wifi@1.1.so
+vendor/lib/android.hardware.wifi@1.2.so
+vendor/lib/android.hardware.wifi@1.3.so
+vendor/lib/android.hardware.wifi@1.4.so
+vendor/lib/android.hardware.wifi@1.5.so
+vendor/lib/android.hardware.wifi@1.6.so
+vendor/lib/android.hardware.wifi.hostapd@1.0.so
+vendor/lib/android.hardware.wifi.hostapd@1.1.so
+vendor/lib/android.hardware.wifi.hostapd@1.2.so
+vendor/lib/android.hardware.wifi.hostapd@1.3.so
+vendor/lib/android.hardware.wifi.supplicant@1.0.so
+vendor/lib/android.hardware.wifi.supplicant@1.1.so
+vendor/lib/android.hardware.wifi.supplicant@1.2.so
+vendor/lib/android.hardware.wifi.supplicant@1.3.so
+vendor/lib/android.hardware.wifi.supplicant@1.4.so
+vendor/lib64/android.hardware.wifi@1.0.so
+vendor/lib64/android.hardware.wifi@1.1.so
+vendor/lib64/android.hardware.wifi@1.2.so
+vendor/lib64/android.hardware.wifi@1.3.so
+vendor/lib64/android.hardware.wifi@1.4.so
+vendor/lib64/android.hardware.wifi@1.5.so
+vendor/lib64/android.hardware.wifi@1.6.so
+vendor/lib64/android.hardware.wifi.hostapd@1.0.so
+vendor/lib64/android.hardware.wifi.hostapd@1.1.so
+vendor/lib64/android.hardware.wifi.hostapd@1.2.so
+vendor/lib64/android.hardware.wifi.hostapd@1.3.so
+vendor/lib64/android.hardware.wifi.supplicant@1.0.so
+vendor/lib64/android.hardware.wifi.supplicant@1.1.so
+vendor/lib64/android.hardware.wifi.supplicant@1.2.so
+vendor/lib64/android.hardware.wifi.supplicant@1.3.so
+vendor/lib64/android.hardware.wifi.supplicant@1.4.so
+
+# Bluetooth libraries
+vendor/lib/android.hardware.bluetooth@1.0.so
+vendor/lib/android.hardware.bluetooth@1.1.so
+vendor/lib/android.hardware.bluetooth.audio@2.0.so
+vendor/lib/android.hardware.bluetooth.audio@2.1.so
+vendor/lib64/android.hardware.bluetooth@1.0.so
+vendor/lib64/android.hardware.bluetooth@1.1.so
+vendor/lib64/android.hardware.bluetooth.audio@2.0.so
+vendor/lib64/android.hardware.bluetooth.audio@2.1.so
+
+# Sensors libraries
+vendor/lib/android.hardware.sensors@1.0.so
+vendor/lib/android.hardware.sensors@2.0.so
+vendor/lib/android.hardware.sensors@2.1.so
+vendor/lib64/android.hardware.sensors@1.0.so
+vendor/lib64/android.hardware.sensors@2.0.so
+vendor/lib64/android.hardware.sensors@2.1.so
+
+# Power libraries
+vendor/lib/android.hardware.power@1.0.so
+vendor/lib/android.hardware.power@1.1.so
+vendor/lib/android.hardware.power@1.2.so
+vendor/lib/android.hardware.power@1.3.so
+vendor/lib64/android.hardware.power@1.0.so
+vendor/lib64/android.hardware.power@1.1.so
+vendor/lib64/android.hardware.power@1.2.so
+vendor/lib64/android.hardware.power@1.3.so
+
+# Thermal libraries
+vendor/lib/android.hardware.thermal@1.0.so
+vendor/lib/android.hardware.thermal@2.0.so
+vendor/lib64/android.hardware.thermal@1.0.so
+vendor/lib64/android.hardware.thermal@2.0.so
+
+# Health libraries
+vendor/lib/android.hardware.health@2.0.so
+vendor/lib/android.hardware.health@2.1.so
+vendor/lib64/android.hardware.health@2.0.so
+vendor/lib64/android.hardware.health@2.1.so
+
+# USB libraries
+vendor/lib/android.hardware.usb@1.0.so
+vendor/lib/android.hardware.usb@1.1.so
+vendor/lib/android.hardware.usb@1.2.so
+vendor/lib/android.hardware.usb@1.3.so
+vendor/lib64/android.hardware.usb@1.0.so
+vendor/lib64/android.hardware.usb@1.1.so
+vendor/lib64/android.hardware.usb@1.2.so
+vendor/lib64/android.hardware.usb@1.3.so
+
+# Vibrator libraries
+vendor/lib/android.hardware.vibrator@1.0.so
+vendor/lib/android.hardware.vibrator@1.1.so
+vendor/lib/android.hardware.vibrator@1.2.so
+vendor/lib/android.hardware.vibrator@1.3.so
+vendor/lib64/android.hardware.vibrator@1.0.so
+vendor/lib64/android.hardware.vibrator@1.1.so
+vendor/lib64/android.hardware.vibrator@1.2.so
+vendor/lib64/android.hardware.vibrator@1.3.so
+
+# Light libraries
+vendor/lib/android.hardware.light@2.0.so
+vendor/lib64/android.hardware.light@2.0.so
+
+# Keymaster libraries
+vendor/lib/android.hardware.keymaster@3.0.so
+vendor/lib/android.hardware.keymaster@4.0.so
+vendor/lib/android.hardware.keymaster@4.1.so
+vendor/lib64/android.hardware.keymaster@3.0.so
+vendor/lib64/android.hardware.keymaster@4.0.so
+vendor/lib64/android.hardware.keymaster@4.1.so
+
+# Gatekeeper libraries
+vendor/lib/android.hardware.gatekeeper@1.0.so
+vendor/lib64/android.hardware.gatekeeper@1.0.so
+
+# Biometrics libraries
+vendor/lib/android.hardware.biometrics.fingerprint@2.1.so
+vendor/lib/android.hardware.biometrics.fingerprint@2.2.so
+vendor/lib/android.hardware.biometrics.fingerprint@2.3.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.1.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.2.so
+vendor/lib64/android.hardware.biometrics.fingerprint@2.3.so
+
+# GNSS libraries
+vendor/lib/android.hardware.gnss@1.0.so
+vendor/lib/android.hardware.gnss@1.1.so
+vendor/lib/android.hardware.gnss@2.0.so
+vendor/lib/android.hardware.gnss@2.1.so
+vendor/lib64/android.hardware.gnss@1.0.so
+vendor/lib64/android.hardware.gnss@1.1.so
+vendor/lib64/android.hardware.gnss@2.0.so
+vendor/lib64/android.hardware.gnss@2.1.so
+
+# NFC libraries
+vendor/lib/android.hardware.nfc@1.0.so
+vendor/lib/android.hardware.nfc@1.1.so
+vendor/lib/android.hardware.nfc@1.2.so
+vendor/lib64/android.hardware.nfc@1.0.so
+vendor/lib64/android.hardware.nfc@1.1.so
+vendor/lib64/android.hardware.nfc@1.2.so
+
+# Memtrack libraries
+vendor/lib/android.hardware.memtrack@1.0.so
+vendor/lib64/android.hardware.memtrack@1.0.so
+
 # Audio configuration files
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_base.xml
@@ -71,43 +313,141 @@ vendor/etc/default_volume_tables.xml
 vendor/etc/a2dpsink_audio_policy_configuration.xml
 vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/audio_board_info.xml
+vendor/etc/audio_io_policy.conf
+vendor/etc/audio_platform_info.xml
+vendor/etc/audio_platform_info_extcodec.xml
+vendor/etc/mixer_paths.xml
+vendor/etc/mixer_paths_dv.xml
+vendor/etc/mixer_paths_tavil.xml
+vendor/etc/audio_tuning_mixer.txt
+vendor/etc/sound_trigger_mixer_paths.xml
+vendor/etc/sound_trigger_platform_info.xml
 
 # Media codecs
 vendor/etc/dax3_media_codecs_dolby_audio.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_vendor.xml
+vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_vendor.xml
+
+# Camera configuration
+vendor/etc/camera/camera_config.xml
+vendor/etc/camera/s5k2la_chromatix.xml
+vendor/etc/camera/s5k3m5_chromatix.xml
+vendor/etc/camera/imx563_chromatix.xml
+vendor/etc/camera/imx682_chromatix.xml
 
 # Init files
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/init/macloader.rc
+vendor/etc/init/android.hardware.audio@7.0-service.samsung.rc
+vendor/etc/init/android.hardware.bluetooth@1.0-service.samsung.rc
+vendor/etc/init/android.hardware.camera.provider@2.6-service.samsung.rc
+vendor/etc/init/android.hardware.drm@1.4-service.clearkey.rc
+vendor/etc/init/android.hardware.gatekeeper@1.0-service.samsung.rc
+vendor/etc/init/android.hardware.gnss@2.1-service.samsung.rc
+vendor/etc/init/android.hardware.health@2.1-service.samsung.rc
+vendor/etc/init/android.hardware.keymaster@4.1-service.samsung.rc
+vendor/etc/init/android.hardware.light@2.0-service.samsung.rc
+vendor/etc/init/android.hardware.memtrack@1.0-service.samsung.rc
+vendor/etc/init/android.hardware.nfc@1.2-service.samsung.rc
+vendor/etc/init/android.hardware.power@1.2-service.samsung.rc
+vendor/etc/init/android.hardware.radio@1.6-service.samsung.rc
+vendor/etc/init/android.hardware.sensors@2.1-service.samsung-multihal.rc
+vendor/etc/init/android.hardware.thermal@2.0-service.samsung.rc
+vendor/etc/init/android.hardware.usb@1.3-service.samsung.rc
+vendor/etc/init/android.hardware.vibrator@1.3-service.samsung.rc
+vendor/etc/init/android.hardware.wifi@1.0-service.rc
+vendor/etc/init/init.samsung.bsp.rc
+vendor/etc/init/init.samsung.display.rc
+vendor/etc/init/init.exynos2200.rc
+vendor/etc/init/vendor.samsung.hardware.security.drk@1.0-service.rc
 
 # NFC
 vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-sec.conf
+
+# Permissions
+vendor/etc/permissions/android.hardware.camera.concurrent.xml
+vendor/etc/permissions/android.hardware.camera.flash-autofocus.xml
+vendor/etc/permissions/android.hardware.camera.front.xml
+vendor/etc/permissions/android.hardware.camera.full.xml
+vendor/etc/permissions/android.hardware.camera.raw.xml
+vendor/etc/permissions/vendor.qti.hardware.camera.postproc.xml
+
+# Seccomp policies
+vendor/etc/seccomp_policy/mediacodec.policy
+vendor/etc/seccomp_policy/mediaextractor.policy
+
+# Security policies
+vendor/etc/selinux/vendor_file_contexts
+vendor/etc/selinux/vendor_hwservice_contexts
+vendor/etc/selinux/vendor_property_contexts
+vendor/etc/selinux/vendor_seapp_contexts
+vendor/etc/selinux/vendor_service_contexts
 
 # Hardware abstraction layers
 vendor/lib/hw/gralloc.s5e8825.so
+vendor/lib/hw/gralloc.exynos2200.so
 vendor/lib/hw/keystore.s5e8825.so
+vendor/lib/hw/keystore.exynos2200.so
 vendor/lib/hw/memtrack.s5e8825.so
+vendor/lib/hw/memtrack.exynos2200.so
 vendor/lib/hw/nfc_nci.samsung.so
 vendor/lib/hw/power.s5e8825.so
+vendor/lib/hw/power.exynos2200.so
 vendor/lib/hw/sensors.s5e8825.so
+vendor/lib/hw/sensors.exynos2200.so
 vendor/lib/hw/thermal.s5e8825.so
+vendor/lib/hw/thermal.exynos2200.so
 vendor/lib/hw/vibrator.s5e8825.so
 vendor/lib/hw/vibrator.exynos2200.so
 vendor/lib/hw/wifiexts.s5e8825.so
 vendor/lib/hw/wifiexts.exynos2200.so
+vendor/lib/hw/audio.primary.s5e8825.so
+vendor/lib/hw/audio.primary.exynos2200.so
+vendor/lib/hw/audio.r_submix.default.so
+vendor/lib/hw/audio.usb.default.so
+vendor/lib/hw/audio_policy.stub.so
+vendor/lib/hw/gatekeeper.s5e8825.so
+vendor/lib/hw/gatekeeper.exynos2200.so
+vendor/lib/hw/fingerprint.s5e8825.so
+vendor/lib/hw/fingerprint.exynos2200.so
+vendor/lib/hw/camera.s5e8825.so
+vendor/lib/hw/camera.exynos2200.so
+vendor/lib/hw/lights.s5e8825.so
+vendor/lib/hw/lights.exynos2200.so
 vendor/lib64/hw/gralloc.s5e8825.so
+vendor/lib64/hw/gralloc.exynos2200.so
 vendor/lib64/hw/keystore.s5e8825.so
+vendor/lib64/hw/keystore.exynos2200.so
 vendor/lib64/hw/memtrack.s5e8825.so
+vendor/lib64/hw/memtrack.exynos2200.so
 vendor/lib64/hw/nfc_nci.samsung.so
 vendor/lib64/hw/power.s5e8825.so
+vendor/lib64/hw/power.exynos2200.so
 vendor/lib64/hw/sensors.s5e8825.so
+vendor/lib64/hw/sensors.exynos2200.so
 vendor/lib64/hw/thermal.s5e8825.so
+vendor/lib64/hw/thermal.exynos2200.so
 vendor/lib64/hw/vibrator.s5e8825.so
 vendor/lib64/hw/vibrator.exynos2200.so
 vendor/lib64/hw/wifiexts.s5e8825.so
 vendor/lib64/hw/wifiexts.exynos2200.so
 vendor/lib64/hw/vendor.samsung.hardware.security.drk@1.0-impl.so
+vendor/lib64/hw/audio.primary.s5e8825.so
+vendor/lib64/hw/audio.primary.exynos2200.so
+vendor/lib64/hw/gatekeeper.s5e8825.so
+vendor/lib64/hw/gatekeeper.exynos2200.so
+vendor/lib64/hw/fingerprint.s5e8825.so
+vendor/lib64/hw/fingerprint.exynos2200.so
+vendor/lib64/hw/camera.s5e8825.so
+vendor/lib64/hw/camera.exynos2200.so
+vendor/lib64/hw/lights.s5e8825.so
+vendor/lib64/hw/lights.exynos2200.so
 
 # Samsung specific libraries
 vendor/lib/libExynosVideoApi.so
@@ -122,6 +462,66 @@ vendor/lib/libsecure_storage.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libwvhidl.so
 vendor/lib/vendor.samsung.hardware.security.drk@1.0.so
+vendor/lib/libcsc.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libExynosUtils.so
+vendor/lib/libion_exynos.so
+vendor/lib/libMali.so
+vendor/lib/libgui_vendor.so
+vendor/lib/libui_vendor.so
+vendor/lib/libsurface_flinger_vendor.so
+vendor/lib/libstagefright_foundation_vendor.so
+vendor/lib/libomx_sharedlibrary.so
+vendor/lib/libOmxVdec.so
+vendor/lib/libOmxVenc.so
+vendor/lib/libOmxCore.so
+vendor/lib/libqservice.so
+vendor/lib/libqdutils.so
+vendor/lib/libqti-util.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qc-radioconfig.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/librilutils.so
+vendor/lib/libmdmdetect.so
+vendor/lib/libperipheral_client.so
+vendor/lib/libtime_genoff.so
+vendor/lib/libloc_core.so
+vendor/lib/libloc_eng.so
+vendor/lib/liblbs_core.so
+vendor/lib/libgps.utils.so
+vendor/lib/libgnss.so
+vendor/lib/libflp.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblowi_client.so
+vendor/lib/libxtwifi_ulp_adaptor.so
+vendor/lib/libxtadapter.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libsystem_health_mon.so
+vendor/lib/libdiag.so
+vendor/lib/liblog.so
+vendor/lib/libcutils.so
+vendor/lib/libutils.so
+vendor/lib/libbinder.so
+vendor/lib/libhardware.so
+vendor/lib/libhardware_legacy.so
+vendor/lib/libpower.so
+vendor/lib/libsuspend.so
+vendor/lib/libbacktrace.so
+vendor/lib/libbase.so
+vendor/lib/libdl.so
+vendor/lib/libm.so
+vendor/lib/libc.so
+vendor/lib/libstdc++.so
+vendor/lib/libz.so
 vendor/lib64/libExynosVideoApi.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libexynos_ion.so
@@ -134,6 +534,51 @@ vendor/lib64/libsecure_storage.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/vendor.samsung.hardware.security.drk@1.0.so
+vendor/lib64/libcsc.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libExynosUtils.so
+vendor/lib64/libion_exynos.so
+vendor/lib64/libMali.so
+vendor/lib64/libgui_vendor.so
+vendor/lib64/libui_vendor.so
+vendor/lib64/libsurface_flinger_vendor.so
+vendor/lib64/libstagefright_foundation_vendor.so
+vendor/lib64/libomx_sharedlibrary.so
+vendor/lib64/libOmxVdec.so
+vendor/lib64/libOmxVenc.so
+vendor/lib64/libOmxCore.so
+vendor/lib64/libqservice.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libqti-util.so
+vendor/lib64/libril-qc-qmi-1.so
+vendor/lib64/libril-qc-radioconfig.so
+vendor/lib64/libril-qcril-hook-oem.so
+vendor/lib64/librilutils.so
+vendor/lib64/libmdmdetect.so
+vendor/lib64/libperipheral_client.so
+vendor/lib64/libtime_genoff.so
+vendor/lib64/libloc_core.so
+vendor/lib64/libloc_eng.so
+vendor/lib64/liblbs_core.so
+vendor/lib64/libgps.utils.so
+vendor/lib64/libgnss.so
+vendor/lib64/libflp.so
+vendor/lib64/libgeofence.so
+vendor/lib64/libizat_core.so
+vendor/lib64/liblowi_client.so
+vendor/lib64/libxtwifi_ulp_adaptor.so
+vendor/lib64/libxtadapter.so
+vendor/lib64/libqdi.so
+vendor/lib64/libqdp.so
+vendor/lib64/libqmi_cci.so
+vendor/lib64/libqmi_common_so.so
+vendor/lib64/libqmi_csi.so
+vendor/lib64/libqmi_encdec.so
+vendor/lib64/libqmiservices.so
+vendor/lib64/libdsutils.so
+vendor/lib64/libidl.so
+vendor/lib64/libsystem_health_mon.so
+vendor/lib64/libdiag.so
 
 # WiFi files
 vendor/etc/wifi/bcmdhd_apsta.bin
@@ -143,9 +588,93 @@ vendor/etc/wifi/bcmdhd_sta.bin_c1
 vendor/etc/wifi/nvram.txt
 vendor/etc/wifi/nvram_net.txt
 vendor/etc/wifi/wpa_supplicant.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/WCNSS_cfg.dat
+vendor/etc/wifi/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/WCNSS_wlan_dictionary.dat
+
+# Bluetooth files
+vendor/etc/bluetooth/bt_vendor.conf
+vendor/etc/bluetooth/bt_did.conf
+vendor/etc/bluetooth/bt_stack.conf
+vendor/etc/bluetooth/main.conf
+vendor/etc/bluetooth/auto_pair_devlist.conf
 
 # Firmware files
 vendor/firmware/bcm4389.bin
 vendor/firmware/bcm4389.hcd
 vendor/firmware/bcm4389c1.hcd
 vendor/firmware/bcm4389c1_murata.hcd
+vendor/firmware/bcm43xx.hcd
+vendor/firmware/BCM4345C0.hcd
+vendor/firmware/BCM4359C0.hcd
+vendor/firmware/BCM4375B1.hcd
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/fimc_is_rta.bin
+vendor/firmware/setfile_2la.bin
+vendor/firmware/setfile_3m5.bin
+vendor/firmware/setfile_imx563.bin
+vendor/firmware/setfile_imx682.bin
+vendor/firmware/companion_2la_master_setfile.bin
+vendor/firmware/companion_2la_mode_setfile.bin
+vendor/firmware/companion_3m5_master_setfile.bin
+vendor/firmware/companion_3m5_mode_setfile.bin
+vendor/firmware/mfc_fw.bin
+vendor/firmware/venus.mdt
+vendor/firmware/venus.mbn
+vendor/firmware/venus.b00
+vendor/firmware/venus.b01
+vendor/firmware/venus.b02
+vendor/firmware/venus.b03
+vendor/firmware/venus.b04
+vendor/firmware/adspr.jsn
+vendor/firmware/adspua.jsn
+vendor/firmware/slpi.mdt
+vendor/firmware/slpi.mbn
+vendor/firmware/modem.mdt
+vendor/firmware/modem.mbn
+vendor/firmware/wcnss.mdt
+vendor/firmware/wcnss.mbn
+vendor/firmware/wlan/prima/WCNSS_cfg.dat
+vendor/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+vendor/firmware/image/adsp.mdt
+vendor/firmware/image/adsp.mbn
+vendor/firmware/image/cdsp.mdt
+vendor/firmware/image/cdsp.mbn
+vendor/firmware/image/modem.mdt
+vendor/firmware/image/modem.mbn
+vendor/firmware/image/slpi.mdt
+vendor/firmware/image/slpi.mbn
+vendor/firmware/image/venus.mdt
+vendor/firmware/image/venus.mbn
+vendor/firmware/image/wcnss.mdt
+vendor/firmware/image/wcnss.mbn
+
+# Keylayout files
+vendor/usr/keylayout/gpio_keys.kl
+vendor/usr/keylayout/sec_touchscreen.kl
+vendor/usr/keylayout/samsung-keypad.kl
+vendor/usr/keylayout/sec_touchkey.kl
+
+# IDC files
+vendor/usr/idc/sec_touchscreen.idc
+vendor/usr/idc/sec_touchkey.idc
+
+# Thermal configuration
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal_info_config.json
+
+# Display configuration
+vendor/etc/display_id_0.xml
+vendor/etc/displayconfig/display_id_0.xml
+
+# Sensors configuration
+vendor/etc/sensors/hals.conf
+vendor/etc/sensors/sns_reg_config
+vendor/etc/sensors/sensor_def_qcomdev.conf
+
+# Public libraries
+vendor/etc/public.libraries.txt
+vendor/etc/public.libraries-samsung.txt

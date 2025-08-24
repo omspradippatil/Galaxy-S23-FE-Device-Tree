@@ -61,23 +61,47 @@ hardware_samsung (Hardware HALs)
 
 If you get "file not found" errors during extraction:
 
-1. Verify vendor.img is properly mounted:
+1. **Use minimal extraction for initial testing:**
 ```bash
-sudo mount -t auto -o loop,ro vendor.img vendor_mount
-ls -la vendor_mount/
-```
-
-2. Check the actual file structure:
-```bash
-find vendor_mount -name "*.so" | head -10
-find vendor_mount -name "*.xml" | head -10
-```
-
-3. Use minimal extraction for testing:
-```bash
-# Edit proprietary-files.txt to include only a few files that definitely exist
+# The proprietary-files.txt has been reduced to essential files only
+# Files prefixed with '-' are optional and will be skipped if not found
 ./extract-files.sh vendor
 ```
+
+2. **If vendor.img mount fails:**
+```bash
+# Try different mount options
+sudo mount -t ext4 -o loop,ro vendor.img vendor_mount
+# Or try without specifying filesystem type
+sudo mount -o loop,ro vendor.img vendor_mount
+```
+
+3. **For missing firmware files:**
+```bash
+# Check if firmware is in a different location
+find vendor_mount -name "*.hcd" -o -name "*.bin" | grep -E "(bcm|wifi|bt)"
+```
+
+4. **Alternative extraction methods:**
+```bash
+# Extract from full ROM dump
+./extract-files.sh /path/to/full/rom/dump
+
+# Or from connected device (requires root)
+./extract-files.sh adb
+
+# Use LineageOS common files as fallback
+./extract-files.sh lineage-fallback
+```
+
+5. **Create minimal vendor tree:**
+```bash
+# If extraction fails completely, create a minimal vendor structure
+mkdir -p vendor/samsung/r11s
+echo "# Minimal vendor makefiles" > vendor/samsung/r11s/r11s-vendor.mk
+```
+
+**Note:** The device tree now uses fallback configurations for missing vendor files. Essential functionality should work even with partial vendor extraction.
 
 ## Building Instructions
 
