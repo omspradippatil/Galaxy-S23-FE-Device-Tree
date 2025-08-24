@@ -227,6 +227,7 @@ vendor/lib/vendor.samsung_slsi.hardware.enn@1.0.so
 vendor/lib/vendor.samsung_slsi.hardware.epic@1.0.so
 vendor/lib64/hw/camera.s5e9925.so
 vendor/lib64/hw/camera.unihal.default.so
+vendor/lib64/hw/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/camera.device@1.0-impl.so
 vendor/lib64/camera.device@3.2-impl.so
 vendor/lib64/camera.device@3.3-impl.so
@@ -296,7 +297,6 @@ vendor/firmware/swcnr_IMX374.json
 vendor/firmware/swcnr_S5K2LA.json
 vendor/firmware/swcnr_S5K2LD.json
 vendor/firmware/swcnr_S5K3K1.json
-vendor/lib64/hw/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
@@ -541,6 +541,7 @@ vendor/lib64/libcodec2_soft_eac3dec.so
 vendor/lib64/libcodec2_hidl@1.1.so
 vendor/lib64/libcodec2_hidl@1.2.so
 vendor/lib64/libcodec2_hidl_plugin.so
+vendor/lib64/libnpu_compiler.so
 
 # Media (Dolby)
 vendor/etc/dolby/dax-default.xml
@@ -581,7 +582,6 @@ vendor/lib64/libgraphgen_intermediate_process.so
 vendor/lib64/libgraphgen_misc.so
 vendor/lib64/libgraphgen_network.so
 vendor/lib64/libir.so
-vendor/lib64/libnpu_compiler.so
 vendor/lib64/libsait_npu_compiler.so
 vendor/lib64/libtoco_graphgen_export.so
 vendor/lib64/neuralnetworks_gpu_sl_driver_prebuilt.so
