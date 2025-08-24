@@ -36,6 +36,27 @@ vendor_samsung_r11s (Vendor Blobs)
 hardware_samsung (Hardware HALs)
 ```
 
+## Vendor Blobs Extraction
+
+### From vendor.img (Recommended for Android 13 - AWJ7 Firmware)
+1. Download the latest firmware S711BXXS1AWJ7 for SM-S711B from SamFirm or similar tools
+2. Extract vendor.img from the firmware package
+3. Place vendor.img in the device tree root directory
+4. Run the extraction script:
+```bash
+./extract-files.sh vendor
+```
+
+### From ADB (Device must be rooted)
+```bash
+./extract-files.sh adb
+```
+
+### From system dump
+```bash
+./extract-files.sh /path/to/system/dump
+```
+
 ## Building Instructions
 
 ### Setting up the build environment
@@ -66,15 +87,15 @@ mkdir -p .repo/local_manifests
 nano .repo/local_manifests/r11s.xml
 ```
 
-5. Add the following to your manifest file:
+5. Add the following to your manifest file (updated for AWJ7):
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="device_samsung_r11s" path="device/samsung/r11s" remote="github" revision="android-13" />
-  <project name="device_samsung_exynos2200-common" path="device/samsung/exynos2200-common" remote="github" revision="android-13" />
-  <project name="kernel_samsung_exynos2200" path="kernel/samsung/exynos2200" remote="github" revision="android-13" />
-  <project name="hardware_samsung" path="hardware/samsung" remote="github" revision="android-13" />
-  <project name="vendor_samsung_r11s" path="vendor/samsung/r11s" remote="github" revision="android-13" />
+  <project name="your-github-username/device_samsung_r11s" path="device/samsung/r11s" remote="github" revision="android-13" />
+  <project name="LineageOS/android_device_samsung_exynos2200-common" path="device/samsung/exynos2200-common" remote="github" revision="lineage-20" />
+  <project name="LineageOS/android_kernel_samsung_exynos2200" path="kernel/samsung/exynos2200" remote="github" revision="lineage-20" />
+  <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-20" />
+  <project name="your-github-username/vendor_samsung_r11s" path="vendor/samsung/r11s" remote="github" revision="android-13-awj7" />
 </manifest>
 ```
 
@@ -110,6 +131,11 @@ out/target/product/r11s/
 1. Boot into recovery (Power + Volume Up + Bixby button)
 2. Flash the ROM zip file
 3. Reboot system
+
+## Notes
+- This device tree is based on firmware version S711BXXS1AWJ7 (January 2024 security patch)
+- Supports Android 13 AOSP builds
+- Compatible with Samsung Galaxy S23 FE (SM-S711B) Global variant
 
 ## Copyright
 

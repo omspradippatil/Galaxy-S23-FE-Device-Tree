@@ -25,9 +25,15 @@ $(call inherit-product, vendor/samsung/r11s/r11s-vendor.mk)
 # Inherit from the common tree
 $(call inherit-product, device/samsung/exynos2200-common/common.mk)
 
-# API level
+# API level - Updated for AWJ7
 PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_TARGET_VNDK_VERSION := 33
+
+# Build properties for AWJ7 compatibility
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.first_api_level=33 \
+    ro.vendor.build.security_patch=2024-01-01 \
+    ro.vendor.build.fingerprint=samsung/r11sxxx/r11s:13/TP1A.220624.014/S711BXXS1AWJ7:user/release-keys
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -47,6 +53,28 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.samsung
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH) \
+    hardware/samsung \
+    hardware/samsung/aidl/power-libperfmgr
+
+# Trustzone
+PRODUCT_PACKAGES += \
+    vendor.samsung.hardware.security.drk@1.0-service
+
+# Init files
+PRODUCT_PACKAGES += \
+    init.r11s.rc \
+    init.exynos2200.rc \
+    init.samsung.bsp.rc \
+    init.samsung.display.rc
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/gpio_keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio_keys.kl \
+    $(DEVICE_PATH)/keylayout/sec_touchscreen.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/sec_touchscreen.kl
 
 # NFC
 PRODUCT_PACKAGES += \

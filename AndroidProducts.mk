@@ -15,12 +15,12 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_r11s.mk \
-    $(LOCAL_DIR)/lineage_r11s.mk
+    $(LOCAL_DIR)/aosp_r11s.mk
 
 COMMON_LUNCH_CHOICES := \
     aosp_r11s-user \
     aosp_r11s-userdebug \
+    aosp_r11s-eng
     aosp_r11s-eng \
     lineage_r11s-user \
     lineage_r11s-userdebug \

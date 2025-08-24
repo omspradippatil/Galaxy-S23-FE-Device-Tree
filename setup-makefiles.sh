@@ -1,6 +1,5 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
 # Copyright (C) 2017-2023 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -24,12 +23,13 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
-# Initialize the helper
-setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
+# Initialize the helper for vendor generation
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
-# Warning headers and guards
+# Warning about using vendor files
 write_headers
 
+# The standard vendor blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
 # Finish

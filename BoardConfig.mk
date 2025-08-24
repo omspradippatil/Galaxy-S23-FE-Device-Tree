@@ -43,20 +43,12 @@ TARGET_KERNEL_CONFIG := r11s_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos2200
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_CLANG_COMPILE := true
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 
 # Display
 TARGET_SCREEN_DENSITY := 450
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := exynos2200
-TARGET_NO_BOOTLOADER := true
-TARGET_NO_RADIOIMAGE := true
-
-# Platform
-TARGET_BOARD_PLATFORM := exynos2200
-TARGET_SOC := exynos2200
-
-# Partitions
+# Partitions - Updated for Android 13
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 104857600
@@ -68,22 +60,16 @@ BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE := 9432989696
 BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext vendor product odm
 
-# Dynamic partitions
-BOARD_USE_DYNAMIC_PARTITIONS := true
-BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
+# Security patch level
+VENDOR_SECURITY_PATCH := 2024-01-01
 
-# System
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_SYSTEM := system
-
-# System_ext
-BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-
-# Vendor
+# Vendor image
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_USES_VENDORIMAGE := true
+
+# Vendor boot
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 # Product
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -166,9 +152,6 @@ TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2023-10-01
-
 # SEPolicy
 include device/samsung/exynos2200-common/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
@@ -179,6 +162,23 @@ BOARD_VNDK_VERSION := current
 # Verified Boot
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
+BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+# WiFi
+BOARD_WLAN_DEVICE                := bcmdhd
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/fw_bcmdhd_apsta.bin"
+
+# Inherit the proprietary files
+include vendor/samsung/r11s/BoardConfigVendor.mk
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 

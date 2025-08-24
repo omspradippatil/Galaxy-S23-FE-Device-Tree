@@ -58,6 +58,18 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed "libshim_sensorndkbridge.so" "${2}"
             ;;
+        vendor/lib*/hw/audio.primary.*.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib64/hw/gatekeeper.exynos2200.so | vendor/lib/hw/gatekeeper.exynos2200.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib64/libwrappergps.so | vendor/lib/libwrappergps.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
+        vendor/lib*/vendor.samsung.hardware.*.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
     esac
 }
 
@@ -66,4 +78,24 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
 extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 
+# Add vendor.img extraction support for AWJ7
+if [ "$SRC" = "vendor" ]; then
+    if [ ! -f vendor.img ]; then
+        echo "vendor.img not found. Please place S711BXXS1AWJ7 vendor.img in current directory."
+        exit 1
+    fi
+    
+    echo "Extracting from S711BXXS1AWJ7 vendor.img..."
+    # Extract vendor.img
+    mkdir -p vendor_mount
+    sudo mount -o loop vendor.img vendor_mount
+    SRC="vendor_mount"
+fi
+
 "${MY_DIR}/setup-makefiles.sh"
+
+# Cleanup vendor mount if used
+if [ "$SRC" = "vendor_mount" ]; then
+    sudo umount vendor_mount
+    rmdir vendor_mount
+fi
