@@ -1,4 +1,4 @@
-# Device Tree for Samsung Galaxy S23 FE (r11s)
+﻿# Device Tree for Samsung Galaxy S23 FE (r11s)
 
 This is an AOSP device tree for the Samsung Galaxy S23 FE (SM-S711B) that can be used to build Android ROMs.
 
@@ -16,10 +16,10 @@ This is an AOSP device tree for the Samsung Galaxy S23 FE (SM-S711B) that can be
 | Battery                 | 4500 mAh, non-removable, 25W wired fast charging, 15W wireless charging, 4.5W reverse charging    |
 | Dimensions              | 158 x 76.5 x 8.2 mm                                                                               |
 | Display                 | 6.4 inches, 1080 x 2340 pixels, Dynamic AMOLED 2X, 120Hz, HDR10+, 1000 nits (HBM), 16M colors     |
-| Rear Camera 1           | 50 MP, f/1.8, 24mm (wide), 1/1.56", 1.0µm, Dual Pixel PDAF, OIS                                  |
-| Rear Camera 2           | 8 MP, f/2.4, 70mm (telephoto), 1/4.5", 1.0µm, PDAF, OIS, 3x optical zoom                         |
-| Rear Camera 3           | 12 MP, f/2.2, 13mm (ultrawide), 1/3.0", 1.12µm                                                    |
-| Front Camera            | 10 MP, f/2.4, 26mm (wide), 1/3.24", 1.22µm, Dual Pixel PDAF                                      |
+| Rear Camera 1           | 50 MP, f/1.8, 24mm (wide), 1/1.56", 1.0Âµm, Dual Pixel PDAF, OIS                                  |
+| Rear Camera 2           | 8 MP, f/2.4, 70mm (telephoto), 1/4.5", 1.0Âµm, PDAF, OIS, 3x optical zoom                         |
+| Rear Camera 3           | 12 MP, f/2.2, 13mm (ultrawide), 1/3.0", 1.12Âµm                                                    |
+| Front Camera            | 10 MP, f/2.4, 26mm (wide), 1/3.24", 1.22Âµm, Dual Pixel PDAF                                      |
 | Fingerprint             | Under-display, optical                                                                            |
 | Sensors                 | Accelerometer, Gyro, Proximity, Compass, Barometer                                                 |
 | Water/Dust Resistance   | IP68 dust/water resistant (up to 1.5m for 30 mins)                                                |
@@ -219,3 +219,8 @@ out/target/product/r11s/
  * limitations under the License.
  */
 ```
+
+## ☕ Support
+
+If you find this project helpful, consider [supporting me](https://ompradippatil.netlify.app/donate).
+
